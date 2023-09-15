@@ -23,7 +23,9 @@ jobs:
         var2: welcome
         var3: to here222
         var4: ${{secrets.TEST1}}
+        var5: ${{secrets.TEST2}}
       run: |
         echo $MY_VAR $FIRST_NAME $var2 $var3. $var4
+        echo $var5
     -
       run: ls /home/runner/work/
