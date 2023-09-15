@@ -1,0 +1,29 @@
+name: Welcome1
+on: push
+
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+    - 
+      name: Print a greeting
+      env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: laisc
+        var2: welcome
+        var3: to here
+      run: |
+        echo $MY_VAR $FIRST_NAME $var2 $var3.
+    - 
+      name: Print 2
+      env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: laisc
+        var2: welcome
+        var3: to here222
+        var4: ${{secrets.TEST1}}
+      run: |
+        echo $MY_VAR $FIRST_NAME $var2 $var3. $var4
+    -
+      run: ls /home/runner/work/
